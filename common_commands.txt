@@ -1,0 +1,54 @@
+C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv>python -m venv project2
+
+C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv>project2\scripts\activate.bat
+
+(project2) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv>pip list
+Package    Version
+---------- -------
+pip        19.2.3
+asgiref    3.2.5
+Django     3.0.4
+pip        20.0.2
+pytz       2019.3
+setuptools 41.2.0
+sqlparse   0.3.1
+
+
+(project2) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv>pip freeze
+asgiref==3.2.5
+Django==3.0.4
+pytz==2019.3
+sqlparse==0.3.1
+(The above content {4 lines} should be saves in `requirements.txt` for furthue use)
+
+OR
+
+
+C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv>mkdir newproj
+
+C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv>python -m venv newproj\venv
+
+
+C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv>newproj\venv\scripts\activate.bat
+
+
+
+
+(venv) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv>pip install -r requirements.txt
+
+
+
+
+---> To have global packages in the virtual environment
+C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv\newproj>python -m venv venv --system-site-packages
+
+--->all packages (here : including gloabal)
+(venv) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv\newproj>pip list --local
+
+
+---> only local packages (i.e. packages created after creating venv)
+(venv) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\python_virenv\newproj>pip list --local
+Package    Version
+---------- -------
+pip        19.2.3
+setuptools 41.2.0
