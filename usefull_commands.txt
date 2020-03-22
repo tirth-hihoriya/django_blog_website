@@ -212,11 +212,31 @@ AttributeError: type object 'Post' has no attribute 'object'
 'First post content!!!'
 >>> post.date_posted
 datetime.datetime(2020, 3, 21, 16, 58, 1, 391798, tzinfo=<UTC>)
->>>
+>>>> post.author
+<User: tirth>
 
- 
+>>> post.email
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Post' object has no attribute 'email'
 
+>>> post.author.email
+'tirth.hihoriya@gmail.com'
 
+>>> user
+<User: tirth>
+>>> user.post_set
+<django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x03FEEEF8>
+
+ >>> user.post_set.all()
+<QuerySet [<Post: BLog 1>, <Post: Blog 2>, <Post: Blog 3>]>
+
+>>> user.post_set.first()
+<Post: BLog 1>
+
+# no need to specify author b'cos of `user`
+>>> user.post_set.create(title='Blog 3',content='Third Post Content!!')    
+<Post: Blog 3>
 
 
 
