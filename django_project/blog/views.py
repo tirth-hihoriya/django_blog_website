@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Post
+
 # from django.http import HttpResponse
 # def about(request): 
 #     return HttpResponse("<h1>Tirth's Blog About</h1>")
