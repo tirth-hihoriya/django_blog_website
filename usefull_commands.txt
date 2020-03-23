@@ -237,6 +237,10 @@ AttributeError: 'Post' object has no attribute 'email'
 # no need to specify author b'cos of `user`
 >>> user.post_set.create(title='Blog 3',content='Third Post Content!!')    
 <Post: Blog 3>
+-------------------------------------------------------------------------------------------------------------------------------
 
 
 
+
+----------------------------------------------------------- v6 --------------------------------------------------------------------
+(django_env) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\django_blog_website\django_project>python manage.py startapp users
