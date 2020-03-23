@@ -244,3 +244,28 @@ AttributeError: 'Post' object has no attribute 'email'
 
 ----------------------------------------------------------- v6 --------------------------------------------------------------------
 (django_env) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\django_blog_website\django_project>python manage.py startapp users
+
+
+
+
+
+
+----------------------------------------------------------- v 8 -------------------------------------------------------------------
+(django_env) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\django_blog_website\django_project>python manage.py makmigrations
+Unknown command: 'makmigrations'. Did you mean makemigrations?
+Type 'manage.py help' for usage.
+
+(django_env) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\django_blog_website\django_project>python manage.py makemigrations
+Migrations for 'users':
+  users\migrations\0001_initial.py
+    - Create model Profile
+
+(django_env) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\django_blog_website\django_project>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, blog, contenttypes, sessions, users
+Running migrations:
+  Applying users.0001_initial... OK
+
+(django_env) C:\Users\Tirth Hihoriya\Google Drive\4th Sem\django_blog_website\django_project>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
