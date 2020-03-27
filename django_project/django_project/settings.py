@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,12 +21,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'uwvf$skgzmvrq+^#e9mom7)vh$$-o!53z+(o3ya#xt&i(6egh1'
-
+# SECRET_KEY = 'uwvf$skgzmvrq+^#e9mom7)vh$$-o!53z+(o3ya#xt&i(6egh1'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['tirthblog.herokuapp.com']
 
 
 # Application definition
@@ -122,7 +125,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   # directory where the uploaded files will be saved
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
+
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   # directory where the uploaded files will be saved
 MEDIA_URL = '/media/'   
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'  # added
@@ -137,3 +143,5 @@ EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('DB_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('DB_PASS')
+
+django_heroku.setting(locals())
